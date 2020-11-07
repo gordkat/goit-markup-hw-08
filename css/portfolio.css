@@ -118,7 +118,16 @@ img {
 
 @media screen and (min-width: 1200px) {
   .logo-web {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
     font-size: 26px;
+    line-height: 1.15385;
+    letter-spacing: 0.03em;
+    color: #2196f3;
+  }
+  .header .logo-web {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 

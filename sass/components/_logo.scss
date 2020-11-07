@@ -30,7 +30,18 @@
 
 @media screen and (min-width: 1200px) {
   .logo-web {
-    font-size: 26px;
+    @include font-style(
+      $logo-font,
+      $font-weight-bold,
+      26px,
+      30px,
+      $letter-spacing-text,
+      $accent-color
+    );
+    .header & {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
   }
 }
 
