@@ -150,9 +150,8 @@
   }
 
   &-label-check {
-    display: flex;
-    align-items: center;
     margin-bottom: 30px;
+    vertical-align: bottom;
     @include font-style(
       $main-font,
       $font-weight-normal,
@@ -167,6 +166,7 @@
       display: inline-block;
       width: 16px;
       height: 15px;
+      vertical-align: bottom;
       border-radius: 2px;
       border: 2px solid $title-color;
       margin-right: 7px;
