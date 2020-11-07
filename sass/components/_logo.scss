@@ -28,6 +28,12 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .logo-web {
+    font-size: 26px;
+  }
+}
+
 .logo-studio-light-theme {
   color: $secondary-text-color-light-theme;
 }
