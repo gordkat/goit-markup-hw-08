@@ -1,0 +1,15 @@
+@mixin font-style(
+  $font-name: $main-font,
+  $font-weight: $font-weight-normal,
+  $font-size: $font-size-text,
+  $line-height: $line-height-text,
+  $letter-spacing: $letter-spacing-text,
+  $color-text: $primary-text-color
+) {
+  font-family: $font-name;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height/$font-size;
+  letter-spacing: $letter-spacing;
+  color: $color-text;
+}

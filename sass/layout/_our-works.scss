@@ -1,0 +1,183 @@
+.filter-list {
+  display: flex;
+
+  &-item {
+    margin-right: 8px;
+  }
+
+  &-btn {
+    display: inline-block;
+    min-width: 128px;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 22px;
+    @include font-style(
+      $main-font,
+      500,
+      16px,
+      26px,
+      $letter-spacing-text,
+      $title-color
+    );
+    text-align: center;
+    background-color: $background-light-theme;
+    transition: background-color 250ms $timing-function,
+      color 250ms $timing-function, box-shadow 250ms $timing-function;
+    &:hover,
+    &:focus {
+      color: $secondary-text-color-dark-theme;
+      background-color: $accent-color;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+.works-list {
+  &-link {
+    display: block;
+    transition: box-shadow 250ms $timing-function;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+}
+
+.works-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.works-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* padding: 63px 24px; */
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: $background-color-accent-trasparent;
+  transform: translateY(100%);
+  transition: transform 250ms $timing-function;
+  &-text {
+    @include font-style(
+      $main-font,
+      $font-weight-normal,
+      18px,
+      28px,
+      $letter-spacing-text,
+      $secondary-text-color-dark-theme
+    );
+  }
+  .works-list-link:hover & {
+    transform: translateY(0);
+  }
+}
+
+.works-description {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  &-title {
+    margin-bottom: 4px;
+    @include font-style(
+      $main-font,
+      $font-weight-bold,
+      17px,
+      36px,
+      0.06em,
+      $title-color
+    );
+  }
+  &-text {
+    @include font-style(
+      $main-font,
+      $font-weight-normal,
+      16px,
+      30px,
+      $letter-spacing-text,
+      $primary-text-color
+    );
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .filter-list {
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+    margin-right: -8px;
+    &-item {
+      margin-bottom: 15px;
+    }
+  }
+  .works-list {
+    margin-top: 40px;
+    &-item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .works-overlay {
+    padding-top: 77px;
+    padding-bottom: 77px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filter-list {
+    justify-content: center;
+    &-item:not(:last-child) {
+    }
+  }
+  .works-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    &-item {
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .works-overlay {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    justify-content: center;
+    &-item:not(:last-child) {
+    }
+  }
+  .works-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    &-item {
+      &:not(:nth-child(3n)) {
+        margin-right: 30px;
+      }
+      &:nth-last-child(n + 4) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .works-overlay {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+}

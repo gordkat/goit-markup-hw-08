@@ -1,0 +1,23 @@
+//utils
+@import "./utils/variables";
+@import "./utils/mixins";
+
+//base
+@import "./base/common";
+@import "./base/visually-hidden";
+
+//components
+@import "./components/logo";
+@import "./components/modal-btn";
+@import "./components/modal";
+@import "./components/social-list";
+@import "./components/title";
+
+//layout
+@import "./layout/header";
+@import "./layout/solutions";
+@import "./layout/professional";
+@import "./layout/what-we-are-doing";
+@import "./layout/our-team";
+@import "./layout/regular-customers";
+@import "./layout/footer";

@@ -1,0 +1,26 @@
+.title {
+  margin-bottom: 30px;
+  @include font-style(
+    $main-font,
+    $font-weight-bold,
+    28px,
+    33px,
+    $letter-spacing-text,
+    $title-color
+  );
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+    @include font-style(
+      $main-font,
+      $font-weight-bold,
+      36px,
+      42px,
+      $letter-spacing-text,
+      $title-color
+    );
+  }
+}

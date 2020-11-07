@@ -1,0 +1,36 @@
+.logo-web {
+  display: block;
+  @include font-style(
+    $logo-font,
+    $font-weight-bold,
+    24px,
+    28px,
+    $letter-spacing-text,
+    $accent-color
+  );
+
+  .header & {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  .footer & {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .logo-web {
+    .header & {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+}
+
+.logo-studio-light-theme {
+  color: $secondary-text-color-light-theme;
+}
+.logo-studio-dark-theme {
+  color: $secondary-text-color-dark-theme;
+}

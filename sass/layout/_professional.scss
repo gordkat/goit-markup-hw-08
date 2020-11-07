@@ -1,0 +1,104 @@
+.professional-list {
+  &-item {
+    &::before {
+      display: block;
+      content: "";
+      height: 120px;
+      margin-bottom: 30px;
+      background-color: $background-light-theme;
+      background-repeat: no-repeat;
+      background-size: 70px 70px;
+      background-position: center;
+    }
+  }
+  &-title {
+    margin-bottom: 10px;
+    @include font-style(
+      $main-font,
+      $font-weight-bold,
+      $font-size-text,
+      16px,
+      $letter-spacing-text,
+      $title-color
+    );
+    text-transform: uppercase;
+  }
+
+  &-text {
+    @include font-style(
+      $main-font,
+      $font-weight-normal,
+      $font-size-text,
+      $line-height-text,
+      $letter-spacing-text,
+      $primary-text-color
+    );
+  }
+}
+
+.icon {
+  &-antenna::before {
+    background-image: url(../images/studia/antenna.svg);
+  }
+
+  &-clock::before {
+    background-image: url(../images/studia/clock.svg);
+  }
+
+  &-diagram::before {
+    background-image: url(../images/studia/diagram.svg);
+  }
+
+  &-astronaut::before {
+    background-image: url(../images/studia/astronaut.svg);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .professional-list {
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    &-title {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .professional-list {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      width: calc((100% - 30px) / 2);
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .professional-list {
+    display: flex;
+
+    &-item {
+      width: calc((100%-3 * 30px) / 4);
+      &::before {
+        display: block;
+        content: "";
+        height: 120px;
+        margin-bottom: 30px;
+        background-color: $background-light-theme;
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+        background-position: center;
+      }
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
