@@ -659,8 +659,11 @@ img {
 }
 
 .solutions {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 118px;
   padding-bottom: 118px;
+  height: 400px;
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studia/hero/hero-mobile.jpg);
   background-repeat: no-repeat;
@@ -705,6 +708,10 @@ img {
 
 @media screen and (min-width: 1200px) {
   .solutions {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studia/hero/hero-desktop.jpg);
   }
   .solutions-content {
