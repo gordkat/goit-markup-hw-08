@@ -9,6 +9,15 @@ body {
   font-family: $main-font;
   min-width: 320px;
 }
+main {
+  padding-top: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    padding-top: 60px;
+  }
+}
 
 .list {
   list-style: none;

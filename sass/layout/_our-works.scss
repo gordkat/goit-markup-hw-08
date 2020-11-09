@@ -56,7 +56,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* padding: 63px 24px; */
+
   padding-left: 24px;
   padding-right: 24px;
   background-color: $background-color-accent-trasparent;
@@ -87,7 +87,7 @@
     @include font-style(
       $main-font,
       $font-weight-bold,
-      17px,
+      18px,
       36px,
       0.06em,
       $title-color
@@ -139,6 +139,7 @@
     margin-top: 30px;
 
     &-item {
+      width: 354px;
       &:nth-child(2n + 1) {
         margin-right: 30px;
       }
